@@ -1,0 +1,9 @@
+# dsh-mocha bundle patch: inserts the dual-face plugin row into the web profile
+# roster. The node half (exports ".") runs in the host process — it registers the
+# Mocha persona prompt section and serves the persona toggle over /dsh-mocha/*.
+# The dsh.client declaration in package.json loads the browser half
+# (exports "./client") in the web GUI, which draws the floating HUD and the
+# composer bridge.
+- insert:
+    - id: mocha
+      name: 'dsh-mocha'
